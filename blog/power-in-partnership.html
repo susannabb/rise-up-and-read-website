@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Power In Partnership! Interviews With Our Partners and Volunteers — Rise Up &amp; Read</title>
+<meta name="description" content="We could never do this alone — hear from the CIDE graduate students and volunteers behind this winter’s pop-up library in Mexico City.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap">
+<script>
+(function () {
+  var lang = "en";
+  try { lang = localStorage.getItem("ruar_lang") || "en"; } catch (e) {}
+  document.documentElement.setAttribute("lang", lang);
+})();
+</script>
+<style>
+  :root {
+    --purple: #3A2466;
+    --purple-deep: #2B1B4D;
+    --purple-soft: #73538F;
+    --coral: #E2552B;
+    --coral-light: #F4734F;
+    --yellow: #F8D227;
+    --cream: #FBF6EC;
+    --cream-2: #F4EBDA;
+    --paper: #FFFFFF;
+    --ink: #2B1B4D;
+    --muted: #5A4A85;
+    --muted-2: #6F6390;
+    --line: #E9DEC8;
+    --serif: "Literata", Georgia, serif;
+    --sans: "Source Sans 3", system-ui, sans-serif;
+    --container: 1200px;
+    --radius: 18px;
+    --hero-min: 600px;
+    --about-h: 580px;
+    --focus-y: 50%;
+    --ov-strong: 0.82;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { margin: 0; font-family: var(--serif); font-weight: 700; line-height: 1.14; text-wrap: pretty; }
+  p { margin: 0; }
+  .wrap { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+  .kicker { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; gap: 10px; font-family: var(--sans); font-weight: 700; font-size: 16px; padding: 13px 26px; border-radius: 999px; border: 2px solid transparent; cursor: pointer; transition: transform 0.12s ease, background 0.18s ease, color 0.18s ease; }
+  .btn:active { transform: translateY(1px); }
+  .btn-coral { background: var(--coral); color: #FFF6EC; }
+  .btn-coral:hover { background: #C8461F; }
+  .btn-ghost { background: transparent; color: var(--purple); border-color: var(--purple); }
+  .btn-ghost:hover { background: rgba(58,36,102,0.06); }
+  .btn-cream { background: var(--cream); color: var(--purple); }
+  .btn-cream:hover { background: #fff; }
+  .btn-lg { font-size: 17px; padding: 16px 32px; }
+
+  /* Header / nav */
+  header.site { position: sticky; top: 0; z-index: 50; background: var(--cream); border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; gap: 28px; padding: 24px 32px; max-width: 1320px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 13px; margin-right: auto; }
+  .brand img { height: 68px; width: auto; }
+  .brand-name { font-family: var(--serif); font-weight: 700; font-size: 19px; line-height: 1.1; color: var(--purple); }
+  .brand-name span { display: block; font-size: 19px; font-weight: 500; font-style: italic; color: var(--coral); letter-spacing: 0.01em; }
+  .nav-links { display: flex; gap: 26px; font-weight: 600; font-size: 15.5px; color: var(--purple); }
+  .nav-links a { padding: 6px 0; border-bottom: 2px solid transparent; transition: border-color 0.15s ease; }
+  .nav-links a:hover { border-color: var(--coral); }
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+  .lang { display: inline-flex; border: 1.5px solid var(--purple); border-radius: 999px; overflow: hidden; font-size: 13px; font-weight: 700; }
+  .lang button { font-family: var(--sans); background: transparent; border: 0; cursor: pointer; padding: 5px 12px; color: var(--purple); font-weight: 700; }
+  .lang button.on { background: var(--purple); color: var(--cream); }
+  .menu-toggle { display: none; background: transparent; border: 0; cursor: pointer; color: var(--purple); padding: 6px; }
+
+  /* Hero */
+  .hero { position: relative; color: #FFF6EC; overflow: hidden; min-height: var(--hero-min, 720px); display: flex; align-items: center; }
+  .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% var(--focus-y, 50%); }
+  .hero-scrim { position: absolute; inset: 0; background: linear-gradient(110deg, rgba(43,27,77,var(--ov-strong)) 0%, rgba(43,27,77,calc(var(--ov-strong) * 0.7)) 38%, rgba(58,36,102,calc(var(--ov-strong) * 0.14)) 78%, rgba(58,36,102,0.03) 100%); }
+  .hero-inner { position: relative; width: 100%; max-width: var(--container); margin: 0 auto; padding: 96px 32px 104px; }
+  .hero-content { max-width: 660px; }
+  .hero h1 { font-size: clamp(40px, 5.4vw, 64px); color: #FFF6EC; }
+  .hero h1 em { font-style: italic; color: var(--yellow); }
+  .hero p.lead { font-size: clamp(18px, 2.2vw, 21px); margin: 26px 0 36px; color: #EADFF5; max-width: 54ch; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 9px; font-size: 13.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--yellow); margin-bottom: 22px; }
+  .hero-badge::before { content: ""; width: 26px; height: 2px; background: var(--yellow); }
+
+  /* Section rhythm */
+  section { padding: 96px 0; }
+  .sec-head { max-width: 720px; }
+  .sec-head h2 { font-size: clamp(30px, 3.6vw, 42px); color: var(--purple); margin-top: 14px; }
+  .sec-head p { color: var(--muted); font-size: 19px; margin-top: 16px; }
+
+  /* About intro (image + text) */
+  .intro { background: var(--cream); }
+  .intro-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 64px; align-items: center; }
+  .intro-photo { position: relative; }
+  .intro-photo img { width: 100%; height: var(--about-h, 580px); object-fit: cover; border-radius: 24px 24px 200px 24px; }
+  .intro-star { position: absolute; top: -22px; left: -22px; }
+  .intro h2 { font-size: clamp(28px, 3.4vw, 40px); color: var(--purple); margin: 14px 0 20px; }
+  .intro p { color: var(--muted); font-size: 18.5px; }
+  .intro p + p { margin-top: 16px; }
+  .intro .btn { margin-top: 28px; }
+
+  /* Mission band (full color field) */
+  .mission { background: var(--purple); color: #F3ECFB; text-align: center; }
+  .mission .wrap { max-width: 920px; }
+  .mission .kicker { color: var(--yellow); }
+  .mission p.statement { font-family: var(--serif); font-style: italic; font-size: clamp(24px, 3.2vw, 33px); line-height: 1.45; margin: 22px auto 0; color: #FFF6EC; }
+  .mission p.sub { margin: 26px auto 0; color: #CDBBE8; font-size: 18px; max-width: 60ch; }
+
+  /* Approach / strategies */
+  .approach { background: var(--cream); }
+  .strat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 48px; }
+  .strat { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 26px 32px; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .strat:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(58,36,102,0.10); }
+  .strat-ico { width: 56px; height: 56px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 18px; }
+  .strat h3 { font-size: 21px; color: var(--purple); margin-bottom: 9px; }
+  .strat p { font-size: 15.5px; color: var(--muted); line-height: 1.55; }
+
+  /* Stat strip */
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 30px; }
+  .stat { text-align: center; padding: 30px 18px; background: var(--cream-2); border-radius: var(--radius); }
+  .stat b { display: block; font-family: var(--serif); font-weight: 700; font-size: clamp(34px, 4vw, 46px); color: var(--coral); line-height: 1; }
+  .stat span { display: block; margin-top: 10px; font-size: 15.5px; font-weight: 600; color: var(--muted); }
+
+  /* Voices / quote band */
+  .voices { background: var(--cream-2); }
+  .voices-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: stretch; margin-top: 40px; }
+  .voice-main { background: var(--paper); border-radius: var(--radius); padding: 48px 46px; border: 1px solid var(--line); display: flex; flex-direction: column; justify-content: center; }
+  .voice-main .mark { font-family: var(--serif); font-size: 64px; line-height: 0.6; color: var(--coral); }
+  .voice-main p { font-family: var(--serif); font-style: italic; font-size: clamp(21px, 2.6vw, 27px); line-height: 1.45; color: var(--purple); margin: 18px 0 0; }
+  .voice-main cite { display: block; margin-top: 22px; font-style: normal; font-weight: 700; font-size: 15px; color: var(--muted); letter-spacing: 0.02em; }
+  .voice-side { display: flex; flex-direction: column; gap: 20px; }
+  .voice-card { background: var(--purple); color: #F3ECFB; border-radius: var(--radius); padding: 30px 30px; flex: 1; }
+  .voice-card h4 { font-family: var(--serif); font-size: 20px; margin: 0 0 8px; color: var(--yellow); }
+  .voice-card p { font-size: 16px; color: #DCCFF0; }
+
+  /* Donate band */
+  .donate { background: var(--coral); color: #FFF6EC; }
+  .donate-grid { display: grid; grid-template-columns: 1fr 0.9fr; gap: 64px; align-items: center; }
+  .donate h2 { font-size: clamp(30px, 3.8vw, 44px); color: #FFF6EC; }
+  .donate .kicker { color: #FFE0CF; }
+  .donate p.intro-p { font-size: 19px; margin: 18px 0 28px; color: #FFE6D8; max-width: 52ch; }
+  .gift-list { display: flex; flex-direction: column; gap: 14px; }
+  .gift { display: flex; gap: 16px; align-items: baseline; background: rgba(255,246,236,0.12); border: 1px solid rgba(255,246,236,0.28); border-radius: 14px; padding: 16px 20px; }
+  .gift b { font-family: var(--serif); font-size: 24px; color: var(--yellow); flex: none; min-width: 78px; }
+  .gift span { font-size: 15.5px; color: #FFEEE4; }
+  .donate-cta { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .donate-note { font-size: 13.5px; color: #FFE0CF; margin-top: 16px; }
+
+  /* Library / portal band */
+  .library { background: var(--purple-deep); color: #EFE7FA; }
+  .library-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center; }
+  .library-art { background: var(--purple); border-radius: 24px; padding: 44px; display: grid; place-items: center; }
+  .library-art img { width: 78%; filter: drop-shadow(0 18px 30px rgba(0,0,0,0.35)); }
+  .library .kicker { color: var(--yellow); }
+  .library h2 { font-size: clamp(28px, 3.6vw, 40px); color: #FFF6EC; margin: 14px 0 18px; }
+  .library p { color: #CFC1E8; font-size: 18px; }
+  .lib-langs { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 26px; }
+  .lib-langs span { font-size: 14px; font-weight: 700; padding: 7px 15px; border-radius: 999px; background: rgba(248,210,39,0.16); color: var(--yellow); border: 1px solid rgba(248,210,39,0.4); }
+  .lib-steps { display: grid; gap: 12px; margin: 24px 0 28px; }
+  .lib-step { display: flex; gap: 14px; align-items: flex-start; }
+  .lib-step b { font-family: var(--serif); color: var(--coral-light); font-size: 18px; flex: none; }
+
+  /* News / updates */
+  .news { background: var(--cream); }
+  .news-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 44px; }
+  .card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(58,36,102,0.10); }
+  .card img { width: 100%; height: 210px; object-fit: cover; }
+  .card-body { padding: 24px 26px 28px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .card .date { font-size: 12.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--coral); }
+  .card h3 { font-size: 21px; color: var(--purple); line-height: 1.25; }
+  .card p { font-size: 15.5px; color: var(--muted); }
+  .card .more { margin-top: auto; font-weight: 700; color: var(--coral); font-size: 15px; }
+
+  /* Get involved */
+  .involved { background: var(--cream-2); }
+  .involved-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 44px; }
+  .inv { background: var(--paper); border-radius: var(--radius); padding: 34px 30px 36px; border: 1px solid var(--line); }
+  .inv-ico { width: 52px; height: 52px; border-radius: 13px; display: grid; place-items: center; margin-bottom: 18px; background: var(--cream-2); }
+  .inv h3 { font-size: 22px; color: var(--purple); margin-bottom: 10px; }
+  .inv p { color: var(--muted); font-size: 16px; }
+  .inv a.more { display: inline-block; margin-top: 16px; font-weight: 700; color: var(--coral); }
+
+  /* Footer */
+  footer.site { background: var(--purple-deep); color: #B9A9D8; padding: 64px 0 36px; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+  .foot-brand { display: flex; align-items: center; gap: 13px; margin-bottom: 18px; }
+  .foot-brand img { height: 54px; }
+  .foot-brand .brand-name { color: #FFF6EC; }
+  .foot-brand .brand-name span { color: var(--coral-light); }
+  footer.site p { font-size: 15px; color: #B9A9D8; max-width: 38ch; }
+  .foot-col h4 { font-family: var(--sans); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8E7CB6; margin: 0 0 16px; }
+  .foot-col a { display: block; color: #D7CAEC; font-size: 15.5px; padding: 5px 0; }
+  .foot-col a:hover { color: #FFF6EC; }
+  .foot-bottom { border-top: 1px solid rgba(255,255,255,0.12); margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-size: 13.5px; color: #8E7CB6; }
+
+  /* Reveal animation */
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+  }
+
+  /* Mobile nav panel */
+  .mobile-panel { display: none; }
+
+  /* Tweaks panel */
+  .tweaks { position: fixed; right: 20px; bottom: 20px; z-index: 999; width: 304px; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 20px 54px rgba(43,27,77,0.30); font-family: var(--sans); display: none; overflow: hidden; }
+  .tweaks.open { display: block; }
+  .tweaks-head { display: flex; align-items: center; justify-content: space-between; padding: 13px 16px; background: var(--purple); color: #FFF6EC; }
+  .tweaks-head b { font-family: var(--serif); font-size: 16px; }
+  .tweaks-head button { background: transparent; border: 0; color: #FFF6EC; cursor: pointer; font-size: 16px; line-height: 1; padding: 4px; }
+  .tweaks-body { padding: 18px 16px; display: grid; gap: 18px; }
+  .tw-row label { display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; color: var(--purple); margin-bottom: 9px; letter-spacing: 0.02em; }
+  .tw-row label span { color: var(--coral); }
+  .tw-row input[type=range] { width: 100%; accent-color: var(--coral); }
+  .tw-reset { justify-self: start; font-size: 12.5px; font-weight: 700; color: var(--muted); background: transparent; border: 0; cursor: pointer; padding: 2px 0 0; text-decoration: underline; }
+
+  @media (max-width: 1000px) {
+    .nav-links, .nav-right .desktop-only { display: none; }
+    .menu-toggle { display: inline-flex; }
+    .intro-grid, .donate-grid, .library-grid, .voices-grid { grid-template-columns: 1fr; gap: 40px; }
+    .strat-grid { grid-template-columns: repeat(2, 1fr); }
+    .news-grid, .involved-grid { grid-template-columns: 1fr 1fr; }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+    .intro-photo img { height: 420px; }
+    .mobile-panel.open { display: block; background: var(--cream); border-top: 1px solid var(--line); padding: 14px 32px 22px; }
+    .mobile-panel.open a { display: block; padding: 12px 0; font-weight: 600; font-size: 17px; color: var(--purple); border-bottom: 1px solid var(--line); }
+  }
+  @media (max-width: 640px) {
+    section { padding: 64px 0; }
+    .wrap { padding: 0 22px; }
+    .nav { padding: 12px 22px; }
+    .hero-inner { padding: 70px 22px 78px; }
+    .strat-grid, .stats, .news-grid, .involved-grid, .foot-grid { grid-template-columns: 1fr; }
+    .intro-photo img { height: 340px; }
+    .voice-main { padding: 34px 28px; }
+  }
+
+
+  .article-hero { padding: 64px 0 0; }
+  .article-hero .back { font-weight: 700; color: var(--coral); font-size: 14.5px; text-decoration: none; }
+  .article-hero .back:hover { color: #C8461F; }
+  .article-hero h1 { font-size: clamp(30px, 4vw, 46px); color: var(--purple); margin-top: 18px; max-width: 20ch; }
+  .article-meta { color: var(--muted-2); font-size: 14.5px; margin-top: 16px; font-weight: 600; }
+  .article-body { max-width: 760px; margin: 36px auto 0; padding-bottom: 90px; }
+  .article-body img, .article-body video { width: 100%; border-radius: 20px; margin: 30px 0; display: block; background: #000; }
+  .article-body p { font-size: 19px; color: var(--muted); margin-top: 20px; line-height: 1.65; }
+  .article-body p:first-of-type { margin-top: 0; }
+  .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="brand" href="#top" aria-label="Rise Up &amp; Read home">
+      <img src="https://static.wixstatic.com/media/757fce_1a2a3588a6b3440dbe0f96a90b8aca82~mv2.png" alt="Rise Up &amp; Read logo">
+      <span class="brand-name">Rise Up &amp; Read<span data-t="brand_sub">Leer Para Crecer</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="projects.html" data-t="nav_work">Projects</a>
+      <a href="updates.html" data-t="nav_news">Updates</a>
+      <a href="about.html" data-t="nav_about">About us</a>
+      <a href="library.html" data-t="nav_library">Library</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="en" class="on">EN</button>
+        <button data-lang="es">ES</button>
+      </div>
+      <a class="btn btn-coral desktop-only" href="support.html" data-t="nav_donate">Donate</a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="17" x2="21" y2="17"></line></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-panel">
+    <a href="projects.html" data-t="nav_work">Projects</a>
+    <a href="updates.html" data-t="nav_news">Updates</a>
+    <a href="about.html" data-t="nav_about">About us</a>
+    <a href="library.html" data-t="nav_library">Library</a>
+    <a href="support.html" data-t="nav_donate">Donate</a>
+  </div>
+</header>
+<div style="height:10px;background:var(--purple);"></div>
+<main id="top">
+  <div class="wrap article-hero reveal">
+    <a class="back" href="../updates.html">← Back to updates</a>
+
+    <h1 class="reveal">Power In Partnership! Interviews With Our Partners and Volunteers</h1>
+    <div class="article-meta reveal">Jonathan Scheffer · April 14, 2024 · 1 min read</div>
+    <div class="article-body reveal">
+      <p>We could never do this alone! Fortunately, Rise Up &amp; Read has found wonderful partners to support our mission in Mexico City, with the graduate students in public policy at CIDE (Centro de Investigación y Docencia Económicas). Along the way, we are blessed to find additional volunteers willing and able to support our work. Hear them speak about their experience at the pop-up Library this winter in Mexico City.</p>
+      <div class="video-grid">
+        <video controls poster="https://static.wixstatic.com/media/757fce_355c5bfa3baa4f4cbc00c5a21cb51b10~mv2.png" src="https://video.wixstatic.com/video/757fce_772c608f66b84a6b97bbee48558722cf/1080p/mp4/file.mp4"></video>
+        <video controls src="https://video.wixstatic.com/video/757fce_d1305a96695c4060bd54adce667eb9cf/1080p/mp4/file.mp4"></video>
+        <video controls src="https://video.wixstatic.com/video/757fce_03e8a3b355514e92bf12e15dcd961bb4/1080p/mp4/file.mp4"></video>
+        <video controls src="https://video.wixstatic.com/video/757fce_1ba82438ee254e92803556c72c48dbad/1080p/mp4/file.mp4"></video>
+        <video controls src="https://video.wixstatic.com/video/757fce_1e41dc58923a4a7e9f7b8fcf2e437039/1080p/mp4/file.mp4"></video>
+        <video controls src="https://video.wixstatic.com/video/757fce_a7729312a65a4b1aabffdca326dd06a9/1080p/mp4/file.mp4"></video>
+      </div>
+    </div>
+  </div>
+  <section class="donate">
+    <div class="wrap donate-grid" style="grid-template-columns:1fr auto;align-items:center;">
+      <div class="reveal">
+        <h2>Support the next story.</h2>
+        <p class="intro-p">Your gift keeps books, library clubs, and the virtual library reaching children on the trail.</p>
+      </div>
+      <a class="btn btn-cream btn-lg reveal" href="../support.html">Donate</a>
+    </div>
+  </section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <img src="https://static.wixstatic.com/media/757fce_1a2a3588a6b3440dbe0f96a90b8aca82~mv2.png" alt="Rise Up &amp; Read logo">
+          <span class="brand-name">Rise Up &amp; Read<span>Leer Para Crecer</span></span>
+        </div>
+        <p data-t="foot_blurb">Bringing books to children on the migrant journey — easing toxic stress through shared reading.</p>
+      </div>
+      <div class="foot-col">
+        <h4 data-t="foot_explore">Explore</h4>
+        <a href="../projects.html" data-t="nav_work">Projects</a>
+        <a href="../updates.html" data-t="nav_news">Updates</a>
+        <a href="../about.html" data-t="nav_about">About us</a>
+        <a href="../library.html" data-t="nav_library">Library</a>
+      </div>
+      <div class="foot-col">
+        <h4 data-t="foot_connect">Connect</h4>
+        <a href="../support.html" data-t="nav_donate">Donate</a>
+        <a href="mailto:info@rise-up-and-read.org">info@rise-up-and-read.org</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-t="foot_copy">© 2026 Rise Up &amp; Read · Leer Para Crecer · A 501(c)(3) nonprofit · EIN 99-2286768</span>
+      <span data-t="foot_made">Built with care for the children of the trail.</span>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  var toggle = document.querySelector(".menu-toggle");
+  var panel = document.querySelector(".mobile-panel");
+  toggle.addEventListener("click", function () {
+    var open = panel.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  panel.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () { panel.classList.remove("open"); toggle.setAttribute("aria-expanded", "false"); });
+  });
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      try { localStorage.setItem("ruar_lang", b.getAttribute("data-lang")); } catch (e) {}
+      window.location.reload();
+    });
+  });
+  var saved = "en";
+  try { saved = localStorage.getItem("ruar_lang") || "en"; } catch (e) {}
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.classList.toggle("on", b.getAttribute("data-lang") === saved);
+  });
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+  }
+})();
+</script>
+</body>
+</html>

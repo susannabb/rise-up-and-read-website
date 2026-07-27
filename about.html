@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About us — Rise Up &amp; Read</title>
+<meta name="description" content="The origin story of Rise Up &amp; Read, and the board behind the books.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap">
+<script>
+(function () {
+  var lang = "en";
+  try { lang = localStorage.getItem("ruar_lang") || "en"; } catch (e) {}
+  document.documentElement.setAttribute("lang", lang);
+})();
+</script>
+<style>
+  :root {
+    --purple: #3A2466;
+    --purple-deep: #2B1B4D;
+    --purple-soft: #73538F;
+    --coral: #E2552B;
+    --coral-light: #F4734F;
+    --yellow: #F8D227;
+    --cream: #FBF6EC;
+    --cream-2: #F4EBDA;
+    --paper: #FFFFFF;
+    --ink: #2B1B4D;
+    --muted: #5A4A85;
+    --muted-2: #6F6390;
+    --line: #E9DEC8;
+    --serif: "Literata", Georgia, serif;
+    --sans: "Source Sans 3", system-ui, sans-serif;
+    --container: 1200px;
+    --radius: 18px;
+    --hero-min: 600px;
+    --about-h: 580px;
+    --focus-y: 50%;
+    --ov-strong: 0.82;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { margin: 0; font-family: var(--serif); font-weight: 700; line-height: 1.14; text-wrap: pretty; }
+  p { margin: 0; }
+  .wrap { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+  .kicker { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; gap: 10px; font-family: var(--sans); font-weight: 700; font-size: 16px; padding: 13px 26px; border-radius: 999px; border: 2px solid transparent; cursor: pointer; transition: transform 0.12s ease, background 0.18s ease, color 0.18s ease; }
+  .btn:active { transform: translateY(1px); }
+  .btn-coral { background: var(--coral); color: #FFF6EC; }
+  .btn-coral:hover { background: #C8461F; }
+  .btn-ghost { background: transparent; color: var(--purple); border-color: var(--purple); }
+  .btn-ghost:hover { background: rgba(58,36,102,0.06); }
+  .btn-cream { background: var(--cream); color: var(--purple); }
+  .btn-cream:hover { background: #fff; }
+  .btn-lg { font-size: 17px; padding: 16px 32px; }
+
+  /* Header / nav */
+  header.site { position: sticky; top: 0; z-index: 50; background: var(--cream); border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; gap: 28px; padding: 24px 32px; max-width: 1320px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 13px; margin-right: auto; }
+  .brand img { height: 68px; width: auto; }
+  .brand-name { font-family: var(--serif); font-weight: 700; font-size: 19px; line-height: 1.1; color: var(--purple); }
+  .brand-name span { display: block; font-size: 19px; font-weight: 500; font-style: italic; color: var(--coral); letter-spacing: 0.01em; }
+  .nav-links { display: flex; gap: 26px; font-weight: 600; font-size: 15.5px; color: var(--purple); }
+  .nav-links a { padding: 6px 0; border-bottom: 2px solid transparent; transition: border-color 0.15s ease; }
+  .nav-links a:hover { border-color: var(--coral); }
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+  .lang { display: inline-flex; border: 1.5px solid var(--purple); border-radius: 999px; overflow: hidden; font-size: 13px; font-weight: 700; }
+  .lang button { font-family: var(--sans); background: transparent; border: 0; cursor: pointer; padding: 5px 12px; color: var(--purple); font-weight: 700; }
+  .lang button.on { background: var(--purple); color: var(--cream); }
+  .menu-toggle { display: none; background: transparent; border: 0; cursor: pointer; color: var(--purple); padding: 6px; }
+
+  /* Hero */
+  .hero { position: relative; color: #FFF6EC; overflow: hidden; min-height: var(--hero-min, 720px); display: flex; align-items: center; }
+  .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% var(--focus-y, 50%); }
+  .hero-scrim { position: absolute; inset: 0; background: linear-gradient(110deg, rgba(43,27,77,var(--ov-strong)) 0%, rgba(43,27,77,calc(var(--ov-strong) * 0.7)) 38%, rgba(58,36,102,calc(var(--ov-strong) * 0.14)) 78%, rgba(58,36,102,0.03) 100%); }
+  .hero-inner { position: relative; width: 100%; max-width: var(--container); margin: 0 auto; padding: 96px 32px 104px; }
+  .hero-content { max-width: 660px; }
+  .hero h1 { font-size: clamp(40px, 5.4vw, 64px); color: #FFF6EC; }
+  .hero h1 em { font-style: italic; color: var(--yellow); }
+  .hero p.lead { font-size: clamp(18px, 2.2vw, 21px); margin: 26px 0 36px; color: #EADFF5; max-width: 54ch; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 9px; font-size: 13.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--yellow); margin-bottom: 22px; }
+  .hero-badge::before { content: ""; width: 26px; height: 2px; background: var(--yellow); }
+
+  /* Section rhythm */
+  section { padding: 96px 0; }
+  .sec-head { max-width: 720px; }
+  .sec-head h2 { font-size: clamp(30px, 3.6vw, 42px); color: var(--purple); margin-top: 14px; }
+  .sec-head p { color: var(--muted); font-size: 19px; margin-top: 16px; }
+
+  /* About intro (image + text) */
+  .intro { background: var(--cream); }
+  .intro-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 64px; align-items: center; }
+  .intro-photo { position: relative; }
+  .intro-photo img { width: 100%; height: var(--about-h, 580px); object-fit: cover; border-radius: 24px 24px 200px 24px; }
+  .intro-star { position: absolute; top: -22px; left: -22px; }
+  .intro h2 { font-size: clamp(28px, 3.4vw, 40px); color: var(--purple); margin: 14px 0 20px; }
+  .intro p { color: var(--muted); font-size: 18.5px; }
+  .intro p + p { margin-top: 16px; }
+  .intro .btn { margin-top: 28px; }
+
+  /* Mission band (full color field) */
+  .mission { background: var(--purple); color: #F3ECFB; text-align: center; }
+  .mission .wrap { max-width: 920px; }
+  .mission .kicker { color: var(--yellow); }
+  .mission p.statement { font-family: var(--serif); font-style: italic; font-size: clamp(24px, 3.2vw, 33px); line-height: 1.45; margin: 22px auto 0; color: #FFF6EC; }
+  .mission p.sub { margin: 26px auto 0; color: #CDBBE8; font-size: 18px; max-width: 60ch; }
+
+  /* Approach / strategies */
+  .approach { background: var(--cream); }
+  .strat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 48px; }
+  .strat { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 26px 32px; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .strat:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(58,36,102,0.10); }
+  .strat-ico { width: 56px; height: 56px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 18px; }
+  .strat h3 { font-size: 21px; color: var(--purple); margin-bottom: 9px; }
+  .strat p { font-size: 15.5px; color: var(--muted); line-height: 1.55; }
+
+  /* Stat strip */
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 30px; }
+  .stat { text-align: center; padding: 30px 18px; background: var(--cream-2); border-radius: var(--radius); }
+  .stat b { display: block; font-family: var(--serif); font-weight: 700; font-size: clamp(34px, 4vw, 46px); color: var(--coral); line-height: 1; }
+  .stat span { display: block; margin-top: 10px; font-size: 15.5px; font-weight: 600; color: var(--muted); }
+
+  /* Voices / quote band */
+  .voices { background: var(--cream-2); }
+  .voices-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: stretch; margin-top: 40px; }
+  .voice-main { background: var(--paper); border-radius: var(--radius); padding: 48px 46px; border: 1px solid var(--line); display: flex; flex-direction: column; justify-content: center; }
+  .voice-main .mark { font-family: var(--serif); font-size: 64px; line-height: 0.6; color: var(--coral); }
+  .voice-main p { font-family: var(--serif); font-style: italic; font-size: clamp(21px, 2.6vw, 27px); line-height: 1.45; color: var(--purple); margin: 18px 0 0; }
+  .voice-main cite { display: block; margin-top: 22px; font-style: normal; font-weight: 700; font-size: 15px; color: var(--muted); letter-spacing: 0.02em; }
+  .voice-side { display: flex; flex-direction: column; gap: 20px; }
+  .voice-card { background: var(--purple); color: #F3ECFB; border-radius: var(--radius); padding: 30px 30px; flex: 1; }
+  .voice-card h4 { font-family: var(--serif); font-size: 20px; margin: 0 0 8px; color: var(--yellow); }
+  .voice-card p { font-size: 16px; color: #DCCFF0; }
+
+  /* Donate band */
+  .donate { background: var(--coral); color: #FFF6EC; }
+  .donate-grid { display: grid; grid-template-columns: 1fr 0.9fr; gap: 64px; align-items: center; }
+  .donate h2 { font-size: clamp(30px, 3.8vw, 44px); color: #FFF6EC; }
+  .donate .kicker { color: #FFE0CF; }
+  .donate p.intro-p { font-size: 19px; margin: 18px 0 28px; color: #FFE6D8; max-width: 52ch; }
+  .gift-list { display: flex; flex-direction: column; gap: 14px; }
+  .gift { display: flex; gap: 16px; align-items: baseline; background: rgba(255,246,236,0.12); border: 1px solid rgba(255,246,236,0.28); border-radius: 14px; padding: 16px 20px; }
+  .gift b { font-family: var(--serif); font-size: 24px; color: var(--yellow); flex: none; min-width: 78px; }
+  .gift span { font-size: 15.5px; color: #FFEEE4; }
+  .donate-cta { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .donate-note { font-size: 13.5px; color: #FFE0CF; margin-top: 16px; }
+
+  /* Library / portal band */
+  .library { background: var(--purple-deep); color: #EFE7FA; }
+  .library-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center; }
+  .library-art { background: var(--purple); border-radius: 24px; padding: 44px; display: grid; place-items: center; }
+  .library-art img { width: 78%; filter: drop-shadow(0 18px 30px rgba(0,0,0,0.35)); }
+  .library .kicker { color: var(--yellow); }
+  .library h2 { font-size: clamp(28px, 3.6vw, 40px); color: #FFF6EC; margin: 14px 0 18px; }
+  .library p { color: #CFC1E8; font-size: 18px; }
+  .lib-langs { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 26px; }
+  .lib-langs span { font-size: 14px; font-weight: 700; padding: 7px 15px; border-radius: 999px; background: rgba(248,210,39,0.16); color: var(--yellow); border: 1px solid rgba(248,210,39,0.4); }
+  .lib-steps { display: grid; gap: 12px; margin: 24px 0 28px; }
+  .lib-step { display: flex; gap: 14px; align-items: flex-start; }
+  .lib-step b { font-family: var(--serif); color: var(--coral-light); font-size: 18px; flex: none; }
+
+  /* News / updates */
+  .news { background: var(--cream); }
+  .news-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 44px; }
+  .card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(58,36,102,0.10); }
+  .card img { width: 100%; height: 210px; object-fit: cover; }
+  .card-body { padding: 24px 26px 28px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .card .date { font-size: 12.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--coral); }
+  .card h3 { font-size: 21px; color: var(--purple); line-height: 1.25; }
+  .card p { font-size: 15.5px; color: var(--muted); }
+  .card .more { margin-top: auto; font-weight: 700; color: var(--coral); font-size: 15px; }
+
+  /* Get involved */
+  .involved { background: var(--cream-2); }
+  .involved-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 44px; }
+  .inv { background: var(--paper); border-radius: var(--radius); padding: 34px 30px 36px; border: 1px solid var(--line); }
+  .inv-ico { width: 52px; height: 52px; border-radius: 13px; display: grid; place-items: center; margin-bottom: 18px; background: var(--cream-2); }
+  .inv h3 { font-size: 22px; color: var(--purple); margin-bottom: 10px; }
+  .inv p { color: var(--muted); font-size: 16px; }
+  .inv a.more { display: inline-block; margin-top: 16px; font-weight: 700; color: var(--coral); }
+
+  /* Footer */
+  footer.site { background: var(--purple-deep); color: #B9A9D8; padding: 64px 0 36px; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+  .foot-brand { display: flex; align-items: center; gap: 13px; margin-bottom: 18px; }
+  .foot-brand img { height: 54px; }
+  .foot-brand .brand-name { color: #FFF6EC; }
+  .foot-brand .brand-name span { color: var(--coral-light); }
+  footer.site p { font-size: 15px; color: #B9A9D8; max-width: 38ch; }
+  .foot-col h4 { font-family: var(--sans); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8E7CB6; margin: 0 0 16px; }
+  .foot-col a { display: block; color: #D7CAEC; font-size: 15.5px; padding: 5px 0; }
+  .foot-col a:hover { color: #FFF6EC; }
+  .foot-bottom { border-top: 1px solid rgba(255,255,255,0.12); margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-size: 13.5px; color: #8E7CB6; }
+
+  /* Reveal animation */
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+  }
+
+  /* Mobile nav panel */
+  .mobile-panel { display: none; }
+
+  /* Tweaks panel */
+  .tweaks { position: fixed; right: 20px; bottom: 20px; z-index: 999; width: 304px; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 20px 54px rgba(43,27,77,0.30); font-family: var(--sans); display: none; overflow: hidden; }
+  .tweaks.open { display: block; }
+  .tweaks-head { display: flex; align-items: center; justify-content: space-between; padding: 13px 16px; background: var(--purple); color: #FFF6EC; }
+  .tweaks-head b { font-family: var(--serif); font-size: 16px; }
+  .tweaks-head button { background: transparent; border: 0; color: #FFF6EC; cursor: pointer; font-size: 16px; line-height: 1; padding: 4px; }
+  .tweaks-body { padding: 18px 16px; display: grid; gap: 18px; }
+  .tw-row label { display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; color: var(--purple); margin-bottom: 9px; letter-spacing: 0.02em; }
+  .tw-row label span { color: var(--coral); }
+  .tw-row input[type=range] { width: 100%; accent-color: var(--coral); }
+  .tw-reset { justify-self: start; font-size: 12.5px; font-weight: 700; color: var(--muted); background: transparent; border: 0; cursor: pointer; padding: 2px 0 0; text-decoration: underline; }
+
+  @media (max-width: 1000px) {
+    .nav-links, .nav-right .desktop-only { display: none; }
+    .menu-toggle { display: inline-flex; }
+    .intro-grid, .donate-grid, .library-grid, .voices-grid { grid-template-columns: 1fr; gap: 40px; }
+    .strat-grid { grid-template-columns: repeat(2, 1fr); }
+    .news-grid, .involved-grid { grid-template-columns: 1fr 1fr; }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+    .intro-photo img { height: 420px; }
+    .mobile-panel.open { display: block; background: var(--cream); border-top: 1px solid var(--line); padding: 14px 32px 22px; }
+    .mobile-panel.open a { display: block; padding: 12px 0; font-weight: 600; font-size: 17px; color: var(--purple); border-bottom: 1px solid var(--line); }
+  }
+  @media (max-width: 640px) {
+    section { padding: 64px 0; }
+    .wrap { padding: 0 22px; }
+    .nav { padding: 12px 22px; }
+    .hero-inner { padding: 70px 22px 78px; }
+    .strat-grid, .stats, .news-grid, .involved-grid, .foot-grid { grid-template-columns: 1fr; }
+    .intro-photo img { height: 340px; }
+    .voice-main { padding: 34px 28px; }
+  }
+
+
+  /* ---------- Inner-page hero ---------- */
+  .page-hero { padding: 72px 0 12px; }
+  .page-hero h1 { font-size: clamp(34px, 4.4vw, 52px); color: var(--purple); }
+  .page-hero h1 em { font-style: italic; color: var(--coral); }
+  .page-hero p.intro { font-size: 19px; color: var(--muted); margin-top: 20px; max-width: 62ch; }
+
+  /* ---------- Project rows ---------- */
+  .project-rows { padding-top: 12px; }
+  .project { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: center; padding: 52px 0; border-bottom: 1px solid var(--line); }
+  .project:last-child { border-bottom: none; }
+  .project.flip > .project-media { order: 2; }
+  .project-media img { width: 100%; height: 400px; object-fit: cover; border-radius: 24px; }
+  .project-media figcaption { font-size: 13.5px; color: var(--muted); font-style: italic; margin-top: 10px; font-family: var(--serif); }
+  .project h2 { font-size: clamp(26px, 2.8vw, 34px); color: var(--purple); }
+  .project p { color: var(--muted); margin-top: 16px; font-size: 17px; }
+  .project .btn { margin-top: 22px; }
+
+  /* ---------- Team ---------- */
+  .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 44px; }
+  .person { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; text-align: center; padding-top: 20px; }
+  .person img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block; }
+  .person .initials { width: 120px; height: 120px; border-radius: 50%; display: grid; place-items: center; margin: 0 auto; background: var(--cream-2); color: var(--purple); font-family: var(--serif); font-size: 42px; font-weight: 700; }
+  .person .pad { padding: 22px 24px 26px; }
+  .person h3 { font-size: 19px; color: var(--purple); }
+  .person .role { font-size: 14px; font-weight: 700; color: var(--coral); margin: 4px 0 10px; }
+  .person p { font-size: 15px; color: var(--muted); line-height: 1.55; }
+
+  /* ---------- About prose + figure ---------- */
+  .about-block { background: color-mix(in oklch, var(--coral-light) 15%, var(--cream) 85%); border-radius: 28px; padding-top: 8px; padding-bottom: 40px; margin-top: 24px; }
+  .prose { max-width: 1080px; margin-left: auto; margin-right: auto; }
+  .prose p { font-size: 20.5px; color: var(--muted); }
+  .prose p + p { margin-top: 18px; }
+  .prose img.float { float: right; width: 320px; max-width: 42%; border-radius: 20px; margin: 6px 0 18px 30px; }
+  .about-figure { margin-top: 8px; clear: both; }
+  .about-figure img { width: 100%; max-height: 500px; object-fit: cover; border-radius: 24px; }
+  .about-figure figcaption { font-size: 13.5px; color: var(--muted); font-style: italic; margin-top: 10px; font-family: var(--serif); }
+
+  /* ---------- Support / give ---------- */
+  .give-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 22px; margin-top: 44px; }
+  .give-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; display: flex; flex-direction: column; gap: 12px; }
+  .give-card.primary { background: var(--purple); border-color: var(--purple); color: #F3ECFB; }
+  .give-card.primary h3 { color: #FFF6EC; }
+  .give-card.primary p { color: #CDBBE8; }
+  .give-card h3 { font-size: 24px; color: var(--purple); }
+  .give-card p { font-size: 15.5px; color: var(--muted); }
+  .give-card .btn { margin-top: auto; align-self: flex-start; }
+  .tax-note { margin-top: 30px; border: 1.5px dashed var(--coral); border-radius: 14px; padding: 22px 28px; font-size: 15px; color: var(--muted); background: rgba(248,210,39,0.10); }
+
+  /* ---------- Updates ---------- */
+  .update-feature { margin-top: 8px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: grid; grid-template-columns: 1fr 1.3fr; }
+  .update-feature img { width: 100%; height: 100%; min-height: 360px; object-fit: cover; }
+  .update-feature .pad { padding: 38px 40px; }
+  .update-feature .date { font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--coral); margin-bottom: 10px; }
+  .update-feature h2 { font-size: 30px; color: var(--purple); line-height: 1.2; }
+  .update-feature p { color: var(--muted); margin-top: 14px; font-size: 16.5px; }
+  .update-list { padding-top: 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .news-mini { background: var(--paper); border-radius: var(--radius); border: 1px solid var(--line); padding: 26px; display: flex; flex-direction: column; gap: 10px; }
+  .news-mini h3 { font-size: 20px; color: var(--purple); line-height: 1.3; }
+  .news-mini p { font-size: 15.5px; color: var(--muted); }
+  .news-mini .more { font-weight: 700; color: var(--coral); font-size: 15px; margin-top: auto; }
+
+  /* ---------- Library ---------- */
+  .lib-hero { text-align: center; }
+  .lib-hero p.intro { margin-left: auto; margin-right: auto; }
+  .lib-cta { text-align: center; padding: 12px 0 8px; }
+  .welcome-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 8px; }
+  .welcome { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 30px; }
+  .welcome .lang-label { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); margin-bottom: 10px; }
+  .welcome h3 { font-size: 21px; color: var(--purple); margin-bottom: 10px; }
+  .welcome p { font-size: 15.5px; color: var(--muted); }
+  .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 36px; }
+  .step { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 26px; }
+  .step .n { width: 44px; height: 44px; border-radius: 50%; background: var(--yellow); color: var(--purple-deep); font-weight: 800; font-size: 20px; display: grid; place-items: center; margin-bottom: 16px; }
+  .step h3 { font-size: 21px; color: var(--purple); margin-bottom: 8px; }
+  .step p { font-size: 15.5px; color: var(--muted); }
+
+  @media (max-width: 1000px) {
+    .project, .update-feature { grid-template-columns: 1fr; }
+    .project.flip > .project-media { order: 0; }
+    .team-grid { grid-template-columns: repeat(3, 1fr); }
+    .give-grid, .update-list, .welcome-grid, .steps-grid { grid-template-columns: 1fr 1fr; }
+    .give-card.primary { grid-column: 1 / -1; }
+  }
+  @media (max-width: 640px) {
+    .team-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .give-grid, .update-list, .welcome-grid, .steps-grid { grid-template-columns: 1fr; }
+    .project-media img { height: 280px; }
+    .update-feature img { min-height: 220px; }
+    .prose img.float { float: none; width: 100%; max-width: 100%; margin: 0 0 18px; }
+  }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="brand" href="index.html" aria-label="Rise Up &amp; Read home">
+      <img src="https://static.wixstatic.com/media/757fce_1a2a3588a6b3440dbe0f96a90b8aca82~mv2.png" alt="Rise Up &amp; Read logo">
+      <span class="brand-name">Rise Up &amp; Read<span data-t="brand_sub">Leer Para Crecer</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="projects.html" data-t="nav_work">Projects</a>
+      <a href="updates.html" data-t="nav_news">Updates</a>
+      <a href="about.html" data-t="nav_about">About us</a>
+      <a href="library.html" data-t="nav_library">Library</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="en" class="on">EN</button>
+        <button data-lang="es">ES</button>
+      </div>
+      <a class="btn btn-coral desktop-only" href="support.html" data-t="nav_donate">Donate</a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="17" x2="21" y2="17"></line></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-panel">
+    <a href="projects.html" data-t="nav_work">Projects</a>
+    <a href="updates.html" data-t="nav_news">Updates</a>
+    <a href="about.html" data-t="nav_about">About us</a>
+    <a href="library.html" data-t="nav_library">Library</a>
+    <a href="support.html" data-t="nav_donate">Donate</a>
+  </div>
+</header>
+<div style="height:10px;background:var(--purple);"></div>
+<main id="top">
+
+  <header class="page-hero wrap reveal">
+    <div class="kicker" data-t="a_kicker">About us</div>
+    <h1 data-t="a_h1">It started as <em>a conversation between friends.</em></h1>
+  </header>
+
+  <div class="wrap about-block">
+    <div class="prose reveal" style="padding-top:28px;">
+      <img class="float" src="../assets/child-stitch-reading.jpeg" alt="A child reading a book on the ground">
+      <p data-t="a_p1">While volunteering as physicians in refugee camps along the U.S.–Mexico border, we met countless parents worried about their children's health, safety, and future. They spoke of food insecurity, chronic stress, exposure to violence, and limited access to education. Again and again, they shared the same fear: without school, books, and the routines of childhood, their children were falling behind.</p>
+      <p data-t="a_p2">Those conversations inspired the creation of Rise Up &amp; Read — a nonprofit dedicated to bringing books, literacy, and hope to children on the move. By creating welcoming libraries, supporting shared reading, and expanding access to multilingual books, we help children rediscover the joy of learning while building the literacy skills and resilience they need to thrive.</p>
+    </div>
+    <figure class="about-figure wrap reveal" style="padding:0;">
+      <img src="../assets/children-tire-book.jpeg" alt="Two children reading a bilingual book together in a tire seat">
+    </figure>
+  </div>
+
+  <section class="wrap" style="padding-top:80px;">
+    <div class="sec-head reveal">
+      <div class="kicker" data-t="a_team_kicker">The board</div>
+      <h2 data-t="a_team_h2">The people behind the books</h2>
+    </div>
+    <div class="team-grid">
+      <div class="person reveal">
+        <img src="../assets/board-susanna.jpg" alt="Susanna Block, MD, MPH">
+        <div class="pad">
+          <h3>Susanna Block, MD, MPH</h3>
+          <div class="role" data-t="board0_role">Founder · Pediatrician</div>
+          <p data-t="board0_bio">Pediatric hospitalist in Seattle and longtime refugee-health advocate, with clinical work both internationally and in the United States. Founded Rise Up &amp; Read after volunteering along the migrant trail.</p>
+        </div>
+      </div>
+      <div class="person reveal">
+        <img src="../assets/board-rachael.png" alt="Rachael Merola, PhD">
+        <div class="pad">
+          <h3>Rachael Merola, PhD</h3>
+          <div class="role" data-t="board1_role">Education expert</div>
+          <p data-t="board1_bio">Has worked in education across the U.S., Europe, Latin America, and Asia. Visiting Research Professor at CIDE in Mexico City and founder of Ascent Education.</p>
+        </div>
+      </div>
+      <div class="person reveal">
+        <img src="../assets/board-robyn.jpg" alt="Robyn Becker, SLP.D., CCC/SLP">
+        <div class="pad">
+          <h3>Robyn Becker, SLP.D., CCC/SLP</h3>
+          <div class="role" data-t="board2_role">Speech-language pathologist</div>
+          <p data-t="board2_bio">Assistant professor of Communication Sciences &amp; Disorders at Montclair State University, with nearly thirty years of practice. Researches literacy-supported language development.</p>
+        </div>
+      </div>
+      <div class="person reveal">
+        <img src="../assets/board-kimberly.jpg" alt="Kimberly Perkins, PhD">
+        <div class="pad">
+          <h3>Kimberly Perkins, PhD</h3>
+          <div class="role" data-t="board3_role">Pilot · Humanitarian</div>
+          <p data-t="board3_bio">International airline pilot and human-performance researcher. Founder of the nonprofit Aviation for Humanity, which delivers school supplies to shelters and schools worldwide.</p>
+        </div>
+      </div>
+      <div class="person reveal">
+        <img src="../assets/board-jonathan.avif" alt="Jonathan Scheffer, MD">
+        <div class="pad">
+          <h3>Jonathan Scheffer, MD</h3>
+          <div class="role" data-t="board4_role">Emergency physician</div>
+          <p data-t="board4_bio">Practices emergency medicine in downtown Seattle. Refugee-health advocate with experience at MSF, Global Response Management, and the Indian Health Service.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="donate">
+    <div class="wrap donate-grid" style="grid-template-columns:1fr auto;align-items:center;">
+      <div class="reveal">
+        <h2 data-t="a_donate_t">Want to be part of the work?</h2>
+        <p class="intro-p" data-t="a_donate_p">We are always looking for partners, volunteers, and supporters.</p>
+      </div>
+      <a class="btn btn-cream btn-lg reveal" href="support.html" data-t="a_donate_cta">Get involved</a>
+    </div>
+  </section>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <img src="https://static.wixstatic.com/media/757fce_1a2a3588a6b3440dbe0f96a90b8aca82~mv2.png" alt="Rise Up &amp; Read logo">
+          <span class="brand-name">Rise Up &amp; Read<span>Leer Para Crecer</span></span>
+        </div>
+        <p data-t="foot_blurb">Bringing books to children on the migrant journey — easing toxic stress through shared reading.</p>
+      </div>
+      <div class="foot-col">
+        <h4 data-t="foot_explore">Explore</h4>
+        <a href="projects.html" data-t="nav_work">Projects</a>
+        <a href="updates.html" data-t="nav_news">Updates</a>
+        <a href="about.html" data-t="nav_about">About us</a>
+        <a href="library.html" data-t="nav_library">Library</a>
+      </div>
+      <div class="foot-col">
+        <h4 data-t="foot_connect">Connect</h4>
+        <a href="support.html" data-t="nav_donate">Donate</a>
+        <a href="mailto:info@rise-up-and-read.org">info@rise-up-and-read.org</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-t="foot_copy">© 2026 Rise Up &amp; Read · Leer Para Crecer · A 501(c)(3) nonprofit · EIN 99-2286768</span>
+      <span data-t="foot_made">Built with care for the children of the trail.</span>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  var I18N = { es: {
+
+    a_kicker: "Quiénes somos",
+    a_h1: "Comenzó como <em>una conversación entre amigos.</em>",
+    a_p1: "Mientras trabajábamos como médicos voluntarios en campamentos de refugiados a lo largo de la frontera entre Estados Unidos y México, conocimos a incontables padres preocupados por la salud, la seguridad y el futuro de sus hijos. Hablaban de inseguridad alimentaria, estrés crónico, exposición a la violencia y acceso limitado a la educación. Una y otra vez, compartían el mismo temor: sin escuela, libros y las rutinas de la infancia, sus hijos se estaban quedando atrás.",
+    a_p2: "Esas conversaciones inspiraron la creación de Rise Up &amp; Read: una organización sin fines de lucro dedicada a llevar libros, alfabetización y esperanza a los niños en movimiento. Al crear bibliotecas acogedoras, fomentar la lectura compartida y ampliar el acceso a libros multilingües, ayudamos a que los niños redescubran la alegría de aprender mientras desarrollan las habilidades de lectura y la resiliencia que necesitan para prosperar.",
+    a_figcap: "Leyendo juntos en un asiento hecho de llanta.",
+    a_team_kicker: "La junta directiva",
+    a_team_h2: "Las personas detrás de los libros",
+    board0_role: "Fundadora · Pediatra", board0_bio: "Pediatra hospitalaria en Seattle y defensora de la salud de los refugiados desde hace mucho tiempo, con trabajo clínico tanto internacional como en Estados Unidos. Fundó Rise Up &amp; Read tras trabajar como voluntaria en la ruta migratoria.",
+    board1_role: "Experta en educación", board1_bio: "Ha trabajado en educación en Estados Unidos, Europa, América Latina y Asia. Profesora investigadora visitante en el CIDE de la Ciudad de México y fundadora de Ascent Education.",
+    board2_role: "Patóloga del habla y el lenguaje", board2_bio: "Profesora de Ciencias y Trastornos de la Comunicación en Montclair State University, con casi treinta años de práctica. Investiga el desarrollo del lenguaje apoyado en la lectura.",
+    board3_role: "Piloto · Humanitaria", board3_bio: "Piloto de aerolínea internacional e investigadora del desempeño humano. Fundadora de la organización sin fines de lucro Aviation for Humanity, que lleva útiles escolares a albergues y escuelas en todo el mundo.",
+    board4_role: "Médico de urgencias", board4_bio: "Ejerce medicina de urgencias en el centro de Seattle. Defensor de la salud de los refugiados, con experiencia en MSF, Global Response Management y el Indian Health Service.",
+    a_donate_t: "¿Quieres ser parte del trabajo?",
+    a_donate_p: "Siempre buscamos aliados, voluntarios y personas que nos apoyen.",
+    a_donate_cta: "Participa"
+  } };
+  var EN = {};
+  var translatable = document.querySelectorAll("[data-t]");
+  translatable.forEach(function (el) { EN[el.getAttribute("data-t")] = el.innerHTML; });
+  function setLang(lang) {
+    translatable.forEach(function (el) {
+      var key = el.getAttribute("data-t");
+      var val = lang === "es" ? (I18N.es[key] != null ? I18N.es[key] : EN[key]) : EN[key];
+      if (val != null) el.innerHTML = val;
+    });
+    document.documentElement.lang = lang;
+    document.querySelectorAll(".lang button").forEach(function (b) {
+      b.classList.toggle("on", b.getAttribute("data-lang") === lang);
+    });
+    try { localStorage.setItem("ruar_lang", lang); } catch (e) {}
+  }
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); });
+  });
+  var saved = "en";
+  try { saved = localStorage.getItem("ruar_lang") || "en"; } catch (e) {}
+  if (saved === "es") setLang("es");
+
+  var toggle = document.querySelector(".menu-toggle");
+  var panel = document.querySelector(".mobile-panel");
+  toggle.addEventListener("click", function () {
+    var open = panel.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  panel.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () { panel.classList.remove("open"); toggle.setAttribute("aria-expanded", "false"); });
+  });
+
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+  }
+})();
+</script>
+</body>
+</html>
