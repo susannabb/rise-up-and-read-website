@@ -347,7 +347,7 @@
 <header class="site">
   <div class="nav">
     <a class="brand" href="index.html" aria-label="Rise Up &amp; Read home">
-      <img src="https://static.wixstatic.com/media/757fce_1a2a3588a6b3440dbe0f96a90b8aca82~mv2.png" alt="Rise Up &amp; Read logo">
+      <img src="../assets/logo-transparent.png" alt="Rise Up &amp; Read logo">
       <span class="brand-name">Rise Up &amp; Read<span data-t="brand_sub">Leer Para Crecer</span></span>
     </a>
     <nav class="nav-links">
@@ -385,10 +385,16 @@
   </header>
 
   <div class="wrap give-grid">
-    <div class="give-card primary reveal">
+    <div class="give-card primary reveal" style="grid-column:1/-1;">
       <h3 data-t="s_g1_t">Donate</h3>
-      <p data-t="s_g1_p">A gift of any size puts real books into children's hands. Write to us and we'll make it easy — and tax-deductible.</p>
-      <a class="btn btn-lg" style="background:var(--coral);color:#FFF6EC" href="mailto:info@rise-up-and-read.org?subject=Donation%20to%20Rise%20Up%20%26%20Read" data-t="s_g1_cta">Email us to give</a>
+      <p data-t="s_g1_p">A gift of any size puts real books into children's hands. Every donation is tax-deductible.</p>
+      <div>
+        <div data-zeffy-embed data-form-url="/embed/donation-form/donate-to-put-a-book-in-a-childs-hands"></div>
+        <div data-zeffy-embed-fallback style="display:none;">
+          <div style="position:relative;overflow:hidden;height:450px;width:100%;border-radius:14px;"><iframe title="Donation form powered by Zeffy" style="position:absolute;border:0;top:0;left:0;bottom:0;right:0;width:100%;height:100%" data-zeffy-embed-src="https://www.zeffy.com/embed/donation-form/donate-to-put-a-book-in-a-childs-hands" allowpaymentrequest allowtransparency="true"></iframe></div>
+        </div>
+        <script src="https://www.zeffy.com/embed/v2/zeffy-embed.js" onerror="document.querySelectorAll('[data-zeffy-embed-fallback]').forEach(function(el){el.style.display='block';el.querySelectorAll('iframe[data-zeffy-embed-src]').forEach(function(f){f.src=f.getAttribute('data-zeffy-embed-src');});});"></script>
+      </div>
     </div>
     <div class="give-card reveal">
       <h3 data-t="s_g2_t">Get involved</h3>
@@ -414,7 +420,7 @@
     <div class="foot-grid">
       <div>
         <div class="foot-brand">
-          <img src="https://static.wixstatic.com/media/757fce_1a2a3588a6b3440dbe0f96a90b8aca82~mv2.png" alt="Rise Up &amp; Read logo">
+          <img src="../assets/logo-transparent.png" alt="Rise Up &amp; Read logo">
           <span class="brand-name">Rise Up &amp; Read<span>Leer Para Crecer</span></span>
         </div>
         <p data-t="foot_blurb">Bringing books to children on the migrant journey — easing toxic stress through shared reading.</p>

@@ -253,7 +253,7 @@
 <header class="site">
   <div class="nav">
     <a class="brand" href="#top" aria-label="Rise Up &amp; Read home">
-      <img src="https://static.wixstatic.com/media/757fce_1a2a3588a6b3440dbe0f96a90b8aca82~mv2.png" alt="Rise Up &amp; Read logo">
+      <img src="../assets/logo-transparent.png" alt="Rise Up &amp; Read logo">
       <span class="brand-name">Rise Up &amp; Read<span data-t="brand_sub">Leer Para Crecer</span></span>
     </a>
     <nav class="nav-links">
@@ -296,7 +296,7 @@
         <h1 data-t="hero_title">Every child deserves <em>a story</em> — even on the hardest journey.</h1>
         <p class="lead" data-t="hero_lead">Rise Up &amp; Read brings books to children in camps and shelters along the migrant trail. A story read together calms fear, builds language, and keeps families connected when everything else is uncertain.</p>
         <div class="hero-ctas">
-          <a class="btn btn-coral btn-lg" href="#donate" data-t="hero_cta1">Give a book</a>
+          <a class="btn btn-coral btn-lg" href="support.html" data-t="hero_cta1">Give a book</a>
           <a class="btn btn-cream btn-lg" href="#about" data-t="hero_cta2">See our work</a>
         </div>
       </div>
@@ -399,28 +399,6 @@
     </div>
   </section>
 
-  <!-- DONATE -->
-  <section class="donate" id="donate">
-    <div class="wrap">
-      <div class="donate-grid">
-        <div class="reveal">
-          <div class="kicker" data-t="donate_kicker">Support the work</div>
-          <h2 data-t="donate_title">Put a real book in a child's hands.</h2>
-          <p class="intro-p" data-t="donate_intro">Rise Up &amp; Read is a 501(c)(3) nonprofit (EIN 99-2286768). Every gift buys books, builds pop-up libraries, and keeps the digital library free for every family.</p>
-          <div class="donate-cta">
-            <a class="btn btn-cream btn-lg" href="#" data-donate-link data-t="donate_btn">Donate now</a>
-          </div>
-          <p class="donate-note" data-t="donate_note">Prefer to send a check or give in another way? Email info@rise-up-and-read.org.</p>
-        </div>
-        <div class="gift-list reveal">
-          <div class="gift"><b>$25</b><span data-t="gift1">Stocks a child with their own books to keep and reread.</span></div>
-          <div class="gift"><b>$100</b><span data-t="gift2">Fills a shelf at a pop-up library inside an encampment.</span></div>
-          <div class="gift"><b>$500</b><span data-t="gift3">Helps create and print a new bilingual title for the trail.</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- LIBRARY / PORTAL -->
   <section class="library" id="library">
     <div class="wrap">
@@ -482,7 +460,7 @@
           <div class="inv-ico" style="color:#E2552B"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-9-8.2C1.6 9 2.8 6 5.6 6c1.8 0 2.9 1.1 3.6 2.2C9.9 7.1 11 6 12.8 6c2.8 0 4 3 2.6 5.8C13.4 15.6 12 20 12 20Z"></path></svg></div>
           <h3 data-t="inv1_t">Give</h3>
           <p data-t="inv1_p">Your donation buys books, builds pop-up libraries, and keeps our digital library free for every family on the trail.</p>
-          <a class="more" href="#donate" data-t="inv1_link">Donate →</a>
+          <a class="more" href="support.html" data-t="inv1_link">Donate →</a>
         </div>
         <div class="inv reveal">
           <div class="inv-ico" style="color:#3A2466"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M11 13 8.5 10.5a2 2 0 0 1 0-2.8l1.2-1.2a3 3 0 0 1 4.2 0l.6.6.6-.6a3 3 0 0 1 4.2 0l.5.5a2.6 2.6 0 0 1 0 3.7L15 16l-2-2-2 2-2.2-2.2a2 2 0 0 0-2.8 0L3 16"></path></svg></div>
@@ -501,7 +479,7 @@
     <div class="foot-grid">
       <div>
         <div class="foot-brand">
-          <img src="https://static.wixstatic.com/media/757fce_1a2a3588a6b3440dbe0f96a90b8aca82~mv2.png" alt="Rise Up &amp; Read logo">
+          <img src="../assets/logo-transparent.png" alt="Rise Up &amp; Read logo">
           <span class="brand-name">Rise Up &amp; Read<span>Leer Para Crecer</span></span>
         </div>
         <p data-t="foot_blurb">Bringing books to children on the migrant journey — easing toxic stress through shared reading.</p>
@@ -672,15 +650,6 @@
     document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
   }
 
-  // ----- donate link placeholder -----
-  document.querySelectorAll("[data-donate-link]").forEach(function (a) {
-    a.addEventListener("click", function (ev) {
-      if (a.getAttribute("href") === "#") {
-        ev.preventDefault();
-        alert("Donation link goes here — tell me your platform (PayPal, Givebutter, Zeffy, etc.) and I'll wire it in.");
-      }
-    });
-  });
 })();
 </script>
 
