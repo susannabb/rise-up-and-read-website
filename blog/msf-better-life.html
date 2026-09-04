@@ -312,15 +312,26 @@
       <p>Read the full article on the Doctors Without Borders website: <a href="https://www.doctorswithoutborders.org/latest/migration-americas-all-we-are-looking-better-life" target="_blank" rel="noopener">"All we are looking for is a better life."</a></p>
     </div>
   </div>
-  <section class="donate">
-    <div class="wrap donate-grid" style="grid-template-columns:1fr auto;align-items:center;">
+  <!-- NEWSLETTER SIGNUP -->
+  <section class="donate" id="subscribe">
+    <div class="wrap donate-grid">
       <div class="reveal">
-        <h2>Support the next story.</h2>
-        <p class="intro-p">Your gift keeps books, library clubs, and the virtual library reaching children on the trail.</p>
+        <div class="kicker" data-t="sub_kicker">Stay in touch</div>
+        <h2 data-t="sub_h2">Sign up for our monthly newsletter.</h2>
+        <p class="intro-p" style="color:#FFE7DA;" data-t="sub_p">Once a month we share what we've been up to — what the children are reading, where the libraries are going next, and what your support made possible. One email a month, nothing more. We respect your inbox.</p>
       </div>
-      <a class="btn btn-cream btn-lg reveal" href="../support.html">Donate</a>
+      <form class="reveal" method="POST" action="https://5c5fbb8a.sibforms.com/serve/MUIFAK512-cj4YZeHSXQs2GBHfOiCF5ynp4fUf_X8hm74CSHAS3cR-hCpVMUIlCDHrmT1369dug6TrEJUm290ZaSoYgJNXHVgYh6YcgBoG1DZWklSCnjL74g6Cq1hcG_0C-qHaofFWuOgcdfyGYa8CSIhW40PMH4Kclw4gACUhO_fP3NUKodUSdPddf-FBhRggRw1oMLBEE2j08WUw==">
+        <label for="RUAR_EMAIL" style="display:block;font-size:14px;font-weight:700;color:#FFF6EC;margin-bottom:8px;" data-t="sub_label">Email address</label>
+        <input type="email" id="RUAR_EMAIL" name="EMAIL" required placeholder="you@example.com" style="box-sizing:border-box;width:100%;padding:14px 16px;font-size:16px;font-family:inherit;color:#3A2466;background:#FFF6EC;border:2px solid rgba(255,246,236,0.28);border-radius:12px;">
+        <input type="text" name="email_address_check" value="" style="position:absolute;left:-9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="locale" value="en">
+        <input type="hidden" name="html_type" value="simple">
+        <button type="submit" class="btn btn-cream" style="width:100%;justify-content:center;margin-top:12px;font-family:inherit;font-size:16px;cursor:pointer;" data-t="sub_cta">Subscribe</button>
+        <p style="margin-top:10px;font-size:13px;color:#FFE0CF;text-align:center;" data-t="sub_note">Unsubscribe any time — and we never share your address.</p>
+      </form>
     </div>
   </section>
+
 </main>
 <footer class="site">
   <div class="wrap">

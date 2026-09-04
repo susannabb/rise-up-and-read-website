@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alone on the Journey: The Growing Crisis of Unaccompanied Migrant Children — Rise Up &amp; Read</title>
-<meta name="description" content="The number of unaccompanied minors entering Mexico has nearly doubled since 2019 — and separation puts children at grave risk.">
+<title>Thank you for signing up — Rise Up &amp; Read</title>
+<meta name="description" content="You are subscribed to the Rise Up &amp; Read newsletter.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap">
@@ -253,105 +253,166 @@
   }
 
 
-  .article-hero { padding: 64px 0 0; }
-  .article-hero .back { font-weight: 700; color: var(--coral); font-size: 14.5px; text-decoration: none; }
-  .article-hero .back:hover { color: #C8461F; }
-  .article-hero h1 { font-size: clamp(30px, 4vw, 46px); color: var(--purple); margin-top: 18px; max-width: 20ch; }
-  .article-meta { color: var(--muted-2); font-size: 14.5px; margin-top: 16px; font-weight: 600; }
-  .article-body { max-width: 760px; margin: 36px auto 0; padding-bottom: 90px; }
-  .article-body img, .article-body video { width: 100%; border-radius: 20px; margin: 30px 0; display: block; }
-  .article-body p { font-size: 19px; color: var(--muted); margin-top: 20px; line-height: 1.65; }
-  .article-body p:first-of-type { margin-top: 0; }
+  /* ---------- Inner-page hero ---------- */
+  .page-hero { padding: 72px 0 12px; }
+  .page-hero h1 { font-size: clamp(34px, 4.4vw, 52px); color: var(--purple); }
+  .page-hero h1 em { font-style: italic; color: var(--coral); }
+  .page-hero p.intro { font-size: 19px; color: var(--muted); margin-top: 20px; max-width: 62ch; }
 
+  /* ---------- Project rows ---------- */
+  .project-rows { padding-top: 12px; }
+  .project { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: center; padding: 52px 0; border-bottom: 1px solid var(--line); }
+  .project:last-child { border-bottom: none; }
+  .project.flip > .project-media { order: 2; }
+  .project-media img { width: 100%; height: 400px; object-fit: cover; border-radius: 24px; }
+  .project-media figcaption { font-size: 13.5px; color: var(--muted); font-style: italic; margin-top: 10px; font-family: var(--serif); }
+  .project h2 { font-size: clamp(26px, 2.8vw, 34px); color: var(--purple); }
+  .project p { color: var(--muted); margin-top: 16px; font-size: 17px; }
+  .project .btn { margin-top: 22px; }
+
+  /* ---------- Team ---------- */
+  .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 44px; }
+  .person { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .person img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+  .person .initials { width: 100%; aspect-ratio: 1; display: grid; place-items: center; background: var(--cream-2); color: var(--purple); font-family: var(--serif); font-size: 64px; font-weight: 700; }
+  .person .pad { padding: 22px 24px 26px; }
+  .person h3 { font-size: 21px; color: var(--purple); }
+  .person .role { font-size: 14px; font-weight: 700; color: var(--coral); margin: 4px 0 10px; }
+  .person p { font-size: 15px; color: var(--muted); line-height: 1.55; }
+
+  /* ---------- About prose + figure ---------- */
+  .about-block { background: color-mix(in oklch, var(--coral-light) 15%, var(--cream) 85%); border-radius: 28px; padding: 8px 0 40px; margin-top: 24px; }
+  .prose { max-width: 900px; }
+  .prose p { font-size: 20.5px; color: var(--muted); }
+  .prose p + p { margin-top: 18px; }
+  .prose img.float { float: right; width: 320px; max-width: 42%; border-radius: 20px; margin: 6px 0 18px 30px; }
+  .about-figure { margin-top: 8px; clear: both; }
+  .about-figure img { width: 100%; max-height: 500px; object-fit: cover; border-radius: 24px; }
+  .about-figure figcaption { font-size: 13.5px; color: var(--muted); font-style: italic; margin-top: 10px; font-family: var(--serif); }
+
+  /* ---------- Support / give ---------- */
+  .give-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 22px; margin-top: 44px; }
+  .give-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; display: flex; flex-direction: column; gap: 12px; }
+  .give-card.primary { background: var(--purple); border-color: var(--purple); color: #F3ECFB; }
+  .give-card.primary h3 { color: #FFF6EC; }
+  .give-card.primary p { color: #CDBBE8; }
+  .give-card h3 { font-size: 24px; color: var(--purple); }
+  .give-card p { font-size: 15.5px; color: var(--muted); }
+  .give-card .btn { margin-top: auto; align-self: flex-start; }
+  .tax-note { margin-top: 30px; border: 1.5px dashed var(--coral); border-radius: 14px; padding: 22px 28px; font-size: 15px; color: var(--muted); background: rgba(248,210,39,0.10); }
+
+  /* ---------- Updates ---------- */
+  .update-feature { margin-top: 8px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: grid; grid-template-columns: 1fr 1.3fr; }
+  .update-feature img { width: 100%; height: 100%; min-height: 360px; object-fit: cover; }
+  .update-feature .pad { padding: 38px 40px; }
+  .update-feature .date { font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--coral); margin-bottom: 10px; }
+  .update-feature h2 { font-size: 30px; color: var(--purple); line-height: 1.2; }
+  .update-feature p { color: var(--muted); margin-top: 14px; font-size: 16.5px; }
+  .update-list { padding-top: 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .news-mini { background: var(--paper); border-radius: var(--radius); border: 1px solid var(--line); padding: 26px; display: flex; flex-direction: column; gap: 10px; }
+  .news-mini h3 { font-size: 20px; color: var(--purple); line-height: 1.3; }
+  .news-mini p { font-size: 15.5px; color: var(--muted); }
+  .news-mini .more { font-weight: 700; color: var(--coral); font-size: 15px; margin-top: auto; }
+
+  /* ---------- Library ---------- */
+  .lib-hero { text-align: center; }
+  .lib-hero p.intro { margin-left: auto; margin-right: auto; }
+  .lib-cta { text-align: center; padding: 12px 0 8px; }
+  .welcome-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 8px; }
+  .welcome { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 30px; }
+  .welcome .lang-label { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); margin-bottom: 10px; }
+  .welcome h3 { font-size: 21px; color: var(--purple); margin-bottom: 10px; }
+  .welcome p { font-size: 15.5px; color: var(--muted); }
+  .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 36px; }
+  .step { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 26px; }
+  .step .n { width: 44px; height: 44px; border-radius: 50%; background: var(--yellow); color: var(--purple-deep); font-weight: 800; font-size: 20px; display: grid; place-items: center; margin-bottom: 16px; }
+  .step h3 { font-size: 21px; color: var(--purple); margin-bottom: 8px; }
+  .step p { font-size: 15.5px; color: var(--muted); }
+
+  @media (max-width: 1000px) {
+    .project, .update-feature { grid-template-columns: 1fr; }
+    .project.flip > .project-media { order: 0; }
+    .team-grid, .give-grid, .update-list, .welcome-grid, .steps-grid { grid-template-columns: 1fr 1fr; }
+    .give-card.primary { grid-column: 1 / -1; }
+  }
+  @media (max-width: 640px) {
+    .team-grid, .give-grid, .update-list, .welcome-grid, .steps-grid { grid-template-columns: 1fr; }
+    .project-media img { height: 280px; }
+    .update-feature img { min-height: 220px; }
+    .prose img.float { float: none; width: 100%; max-width: 100%; margin: 0 0 18px; }
+  }
 </style>
 </head>
 <body>
 <header class="site">
   <div class="nav">
-    <a class="brand" href="#top" aria-label="Rise Up &amp; Read home">
-      <img src="../../assets/logo-transparent.png" alt="Rise Up &amp; Read logo">
+    <a class="brand" href="index.html" aria-label="Rise Up &amp; Read home">
+      <img src="../assets/logo-transparent.png" alt="Rise Up &amp; Read logo">
       <span class="brand-name">Rise Up &amp; Read<span data-t="brand_sub">Leer Para Crecer</span></span>
     </a>
     <nav class="nav-links">
-      <a href="../projects.html" data-t="nav_work">Projects</a>
-      <a href="../updates.html" data-t="nav_news">Updates</a>
-      <a href="../about.html" data-t="nav_about">About us</a>
-      <a href="../library.html" data-t="nav_library">Library</a>
+      <a href="projects.html" data-t="nav_work">Projects</a>
+      <a href="updates.html" data-t="nav_news">Updates</a>
+      <a href="about.html" data-t="nav_about">About us</a>
+      <a href="library.html" data-t="nav_library">Library</a>
     </nav>
     <div class="nav-right">
       <div class="lang" role="group" aria-label="Language">
         <button data-lang="en" class="on">EN</button>
         <button data-lang="es">ES</button>
       </div>
-      <a class="btn btn-coral desktop-only" href="../support.html" data-t="nav_donate">Donate</a>
+      <a class="btn btn-coral desktop-only" href="support.html" data-t="nav_donate">Donate</a>
       <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="17" x2="21" y2="17"></line></svg>
       </button>
     </div>
   </div>
   <div class="mobile-panel">
-    <a href="../projects.html" data-t="nav_work">Projects</a>
-    <a href="../updates.html" data-t="nav_news">Updates</a>
-    <a href="../about.html" data-t="nav_about">About us</a>
-    <a href="../library.html" data-t="nav_library">Library</a>
-    <a href="../support.html" data-t="nav_donate">Donate</a>
+    <a href="projects.html" data-t="nav_work">Projects</a>
+    <a href="updates.html" data-t="nav_news">Updates</a>
+    <a href="about.html" data-t="nav_about">About us</a>
+    <a href="library.html" data-t="nav_library">Library</a>
+    <a href="support.html" data-t="nav_donate">Donate</a>
   </div>
 </header>
 <div style="height:10px;background:var(--purple);"></div>
 <main id="top">
-  <div class="wrap article-hero reveal">
-    <a class="back" href="../updates.html">← Back to updates</a>
-
-    <h1 class="reveal">Alone on the Journey: The Growing Crisis of Unaccompanied Migrant Children</h1>
-    <div class="article-meta reveal">Susanna Block · June 7, 2025 · 1 min read</div>
-    <div class="article-body reveal">
-      <img src="https://static.wixstatic.com/media/757fce_2d5fb4e420e04dd39db59462740a1992~mv2.jpg" alt="Migrant encampment, Mexico City">
-      <p>More and more children are arriving in Mexico alone — without the loved ones they began their migration journey with. In just four years, the number of unaccompanied minors entering Mexico has nearly doubled, soaring from 69,500 in 2019 to over 137,000 in 2023. A recent study released in May 2025 by Plan International and Save the Children paints a sobering picture: 155 children between the ages of 7 and 16 were interviewed across Ciudad Juárez, Reynosa, and Tijuana. Nearly two-thirds of the children in Ciudad Juárez left home with a parent or guardian, but only a third arrived at the border with someone by their side.</p>
-      <p>This trend of painful separation is something we've witnessed firsthand in migrant encampments not only in those cities but now in Mexico City as well. Separation from family leaves deep emotional wounds — but it also puts children, especially girls, at grave risk. Alone and unprotected, many face violence, exploitation, trafficking, and coercion by armed groups. The journey that was supposed to offer hope and safety often delivers fear and danger instead. These children are navigating one of the world's most perilous migration routes — without the support and care they need.</p>
-      <p>At Rise Up and Read, we believe every child deserves a safe place to land and a story to hold onto. Help us continue to provide books, reading spaces, and a sense of possibility to children who have already lost so much. This research is further supported by the study "Unaccompanied Children: Risks and Violence Along the Migration Route Through Mexico," conducted by the Human Rights Programme at Universidad Iberoamericana CDMX between November 2024 and February 2025.</p>
-    </div>
-  </div>
-  <!-- NEWSLETTER SIGNUP -->
-  <section class="donate" id="subscribe">
-    <div class="wrap donate-grid">
-      <div class="reveal">
-        <div class="kicker" data-t="sub_kicker">Stay in touch</div>
-        <h2 data-t="sub_h2">Sign up for our monthly newsletter.</h2>
-        <p class="intro-p" style="color:#FFE7DA;" data-t="sub_p">Once a month we share what we've been up to — what the children are reading, where the libraries are going next, and what your support made possible. One email a month, nothing more. We respect your inbox.</p>
+  <section class="wrap reveal" style="padding-top:96px;padding-bottom:112px;text-align:center;">
+    <div style="max-width:660px;margin:0 auto;">
+      <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#E2552B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-bottom:26px;">
+        <path d="M2 5.5A2.5 2.5 0 0 1 4.5 3H10a2 2 0 0 1 2 2v14a1.5 1.5 0 0 0-1.5-1.5H4.5A2.5 2.5 0 0 1 2 15V5.5Z"></path>
+        <path d="M22 5.5A2.5 2.5 0 0 0 19.5 3H14a2 2 0 0 0-2 2v14a1.5 1.5 0 0 1 1.5-1.5h6A2.5 2.5 0 0 0 22 15V5.5Z"></path>
+      </svg>
+      <div class="kicker" data-t="c_kicker">You're on the list</div>
+      <h1 style="font-family:var(--serif);font-size:clamp(32px,5vw,54px);line-height:1.14;color:var(--purple);margin-top:14px;" data-t="c_h1">Thank you for <em>signing up!</em></h1>
+      <p class="intro" style="margin:20px auto 0;max-width:52ch;" data-t="c_p">You're on the Rise Up &amp; Read newsletter list. We'll send occasional updates about the children, books, libraries, and people making this work possible.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:36px;">
+        <a class="btn btn-coral btn-lg" href="https://www.rise-up-and-read.org/" data-t="c_cta">Return to the homepage</a>
+        <a class="btn btn-ghost btn-lg" href="updates.html" data-t="c_cta2">Read past updates</a>
       </div>
-      <form class="reveal" method="POST" action="https://5c5fbb8a.sibforms.com/serve/MUIFAK512-cj4YZeHSXQs2GBHfOiCF5ynp4fUf_X8hm74CSHAS3cR-hCpVMUIlCDHrmT1369dug6TrEJUm290ZaSoYgJNXHVgYh6YcgBoG1DZWklSCnjL74g6Cq1hcG_0C-qHaofFWuOgcdfyGYa8CSIhW40PMH4Kclw4gACUhO_fP3NUKodUSdPddf-FBhRggRw1oMLBEE2j08WUw==">
-        <label for="RUAR_EMAIL" style="display:block;font-size:14px;font-weight:700;color:#FFF6EC;margin-bottom:8px;" data-t="sub_label">Email address</label>
-        <input type="email" id="RUAR_EMAIL" name="EMAIL" required placeholder="you@example.com" style="box-sizing:border-box;width:100%;padding:14px 16px;font-size:16px;font-family:inherit;color:#3A2466;background:#FFF6EC;border:2px solid rgba(255,246,236,0.28);border-radius:12px;">
-        <input type="text" name="email_address_check" value="" style="position:absolute;left:-9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <input type="hidden" name="locale" value="en">
-        <input type="hidden" name="html_type" value="simple">
-        <button type="submit" class="btn btn-cream" style="width:100%;justify-content:center;margin-top:12px;font-family:inherit;font-size:16px;cursor:pointer;" data-t="sub_cta">Subscribe</button>
-        <p style="margin-top:10px;font-size:13px;color:#FFE0CF;text-align:center;" data-t="sub_note">Unsubscribe any time — and we never share your address.</p>
-      </form>
     </div>
   </section>
-
 </main>
 <footer class="site">
   <div class="wrap">
     <div class="foot-grid">
       <div>
         <div class="foot-brand">
-          <img src="../../assets/logo-transparent.png" alt="Rise Up &amp; Read logo">
+          <img src="../assets/logo-transparent.png" alt="Rise Up &amp; Read logo">
           <span class="brand-name">Rise Up &amp; Read<span>Leer Para Crecer</span></span>
         </div>
         <p data-t="foot_blurb">Bringing books to children on the migrant journey — easing toxic stress through shared reading.</p>
       </div>
       <div class="foot-col">
         <h4 data-t="foot_explore">Explore</h4>
-        <a href="../projects.html" data-t="nav_work">Projects</a>
-        <a href="../updates.html" data-t="nav_news">Updates</a>
-        <a href="../about.html" data-t="nav_about">About us</a>
-        <a href="../library.html" data-t="nav_library">Library</a>
+        <a href="projects.html" data-t="nav_work">Projects</a>
+        <a href="updates.html" data-t="nav_news">Updates</a>
+        <a href="about.html" data-t="nav_about">About us</a>
+        <a href="library.html" data-t="nav_library">Library</a>
       </div>
       <div class="foot-col">
         <h4 data-t="foot_connect">Connect</h4>
-        <a href="../support.html" data-t="nav_donate">Donate</a>
+        <a href="support.html" data-t="nav_donate">Donate</a>
         <a href="mailto:info@rise-up-and-read.org">info@rise-up-and-read.org</a>
         <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
       </div>
@@ -364,6 +425,55 @@
 </footer>
 <script>
 (function () {
+  var I18N = { es: {
+    u_kicker: "Novedades",
+    u_h1: "Notas <em>desde el terreno.</em>",
+    u_sub: "Cada publicación del terreno, en un solo lugar — la más reciente primero.",
+    u_res_kicker: "Recursos",
+    u_res_h2: "Boletines e informes",
+    b1_date: "2 de junio de 2026", b1_t: "Field Update: The COIL Books Are Here", b1_p: "Estudiantes de posgrado de Montclair State y del CIDE en la Ciudad de México escribieron juntos libros bilingües para los niños de los campamentos — y esta semana los pusimos en sus manos.", b1_cta: "Lee la publicación completa →",
+    b2_date: "25 de abril de 2026", b2_t: "From a Seattle Classroom to Mexico City Shelters", b2_p: "Cómo una comunidad escolar convirtió una conversación tranquila en cinco nuevas bibliotecas en campamentos de la Ciudad de México. Por Kim Perkins.", b2_cta: "Leer más →",
+    b3_date: "20 de abril de 2026", b3_t: "Stories Without Borders: Expanding Access to Reading Across the Migration Trail", b3_p: "Nuestra biblioteca virtual, en alianza con Télécoms Sans Frontières, ilumina ahora 25 pantallas en centros para migrantes en Colombia, Guatemala y México.", b3_cta: "Leer más →",
+    b4_date: "6 de febrero de 2026", b4_t: "Changing Demographics on the Migrant Trail", b4_p: "Notas de una reciente visita a la Ciudad de México — cada vez conocemos a más niños cuyas familias han sido deportadas de Estados Unidos.", b4_cta: "Leer más →",
+    b5_date: "7 de septiembre de 2025", b5_t: "There is no \"Back to School\" for Migrant Children Living in Encampments", b5_p: "Los niños en campamentos y albergues para migrantes en México enfrentan barreras profundas a uno de sus derechos más básicos: la educación.", b5_cta: "Leer más →",
+    b6_date: "7 de junio de 2025", b6_t: "Alone on the Journey: The Growing Crisis of Unaccompanied Migrant Children", b6_p: "El número de menores no acompañados que ingresan a México casi se ha duplicado desde 2019 — y la separación pone a los niños en grave riesgo.", b6_cta: "Leer más →",
+    b7_date: "14 de agosto de 2024", b7_t: "Old Tires Make New Libraries", b7_p: "Las llantas recicladas se convierten en asientos coloridos y resistentes a la intemperie para nuestras bibliotecas emergentes — buenas para el presupuesto y para el planeta.", b7_cta: "Leer más →",
+    b8_date: "7 de junio de 2024", b8_t: "\"All we are looking for is a better life.\" (An article by MSF)", b8_p: "Compartimos este informe de Médicos Sin Fronteras sobre la migración en las Américas.", b8_cta: "Leer más →",
+    b9_date: "14 de abril de 2024", b9_t: "Power In Partnership! Interviews With Our Partners and Volunteers", b9_p: "Nunca podríamos hacer esto solos — escucha a los estudiantes de posgrado del CIDE y a los voluntarios detrás de la biblioteca emergente de este invierno en la Ciudad de México.", b9_cta: "Leer más →",
+    b10_date: "14 de abril de 2024", b10_t: "Taking It To The Streets: Bringing Books to Encampments in Mexico City", b10_p: "Una biblioteca emergente para migrantes haitianos en la colonia Juárez — libros en criollo, español e inglés, y muchos niños curiosos.", b10_cta: "Leer más →",
+    b11_date: "14 de abril de 2023", b11_t: "Meet Charles", b11_p: "Charles, residente del campamento de refugiados Senda, comparte lo que la nueva biblioteca en Reynosa significa para él y su comunidad.", b11_cta: "Leer más →",
+    b12_date: "16 de febrero de 2023", b12_t: "Meet Melissa and Daniela", b12_p: "Estudiantes de posgrado en patología del habla comparten su proyecto de aprendizaje-servicio y el vínculo entre la alfabetización y el desarrollo emocional saludable.", b12_cta: "Leer más →",
+    b13_date: "4 de diciembre de 2022", b13_t: "Solidarity Engineering Breaking Ground on the New Reynosa Library", b13_p: "El primer paso para crear un espacio seguro donde niños y familias puedan acceder a libros y leer juntos.", b13_cta: "Leer más →",
+    b14_date: "15 de noviembre de 2022", b14_t: "Our Amazing Partners: Solidarity Engineering", b14_p: "Conoce a los fundadores de Solidarity Engineering, quienes se conocieron en la frontera entre EE. UU. y México y convirtieron un mismo podcast en una misión propia.", b14_cta: "Leer más →",
+    u2_t: "Boletín — enero 2026", u2_p: "Lo que tu apoyo hizo posible este invierno, en fotos y cartas breves desde el terreno.", u2_cta: "Lee el boletín →",
+    u3_t: "Informe anual 2025", u3_p: "Un recuento completo del año: nuestros aliados, nuestros clubes de lectura y lo que viene.", u3_cta: "Abre el informe →",
+    u4_t: "Caminamos por los libros", u4_p: "Nuestra recaudación en el sendero: cada milla caminada ayuda a comprar la próxima caja de libros.", u4_cta: "Pregúntanos →",
+    u_donate_t: "La mejor novedad es la que tú haces posible.",
+    u_donate_p: "Apoya la próxima caja de libros, el próximo club de lectura, el próximo cuento.",
+    u_donate_cta: "Donar"
+  } };
+  var EN = {};
+  var translatable = document.querySelectorAll("[data-t]");
+  translatable.forEach(function (el) { EN[el.getAttribute("data-t")] = el.innerHTML; });
+  function setLang(lang) {
+    translatable.forEach(function (el) {
+      var key = el.getAttribute("data-t");
+      var val = lang === "es" ? (I18N.es[key] != null ? I18N.es[key] : EN[key]) : EN[key];
+      if (val != null) el.innerHTML = val;
+    });
+    document.documentElement.lang = lang;
+    document.querySelectorAll(".lang button").forEach(function (b) {
+      b.classList.toggle("on", b.getAttribute("data-lang") === lang);
+    });
+    try { localStorage.setItem("ruar_lang", lang); } catch (e) {}
+  }
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); });
+  });
+  var saved = "en";
+  try { saved = localStorage.getItem("ruar_lang") || "en"; } catch (e) {}
+  if (saved === "es") setLang("es");
+
   var toggle = document.querySelector(".menu-toggle");
   var panel = document.querySelector(".mobile-panel");
   toggle.addEventListener("click", function () {
@@ -373,21 +483,11 @@
   panel.querySelectorAll("a").forEach(function (a) {
     a.addEventListener("click", function () { panel.classList.remove("open"); toggle.setAttribute("aria-expanded", "false"); });
   });
-  document.querySelectorAll(".lang button").forEach(function (b) {
-    b.addEventListener("click", function () {
-      try { localStorage.setItem("ruar_lang", b.getAttribute("data-lang")); } catch (e) {}
-      window.location.reload();
-    });
-  });
-  var saved = "en";
-  try { saved = localStorage.getItem("ruar_lang") || "en"; } catch (e) {}
-  document.querySelectorAll(".lang button").forEach(function (b) {
-    b.classList.toggle("on", b.getAttribute("data-lang") === saved);
-  });
+
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.12 });
     document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
   } else {
     document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
