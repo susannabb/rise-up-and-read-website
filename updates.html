@@ -302,7 +302,7 @@
   .tax-note { margin-top: 30px; border: 1.5px dashed var(--coral); border-radius: 14px; padding: 22px 28px; font-size: 15px; color: var(--muted); background: rgba(248,210,39,0.10); }
 
   /* ---------- Updates ---------- */
-  .update-feature { margin-top: 8px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: grid; grid-template-columns: 1fr 1.3fr; }
+  .update-feature { margin-top: 8px; margin-bottom: 22px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: grid; grid-template-columns: 1fr 1.3fr; }
   .update-feature img { width: 100%; height: 100%; min-height: 360px; object-fit: cover; }
   .update-feature .pad { padding: 38px 40px; }
   .update-feature .date { font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--coral); margin-bottom: 10px; }
@@ -384,6 +384,17 @@
   </header>
 
   <div class="wrap">
+
+    <article class="update-feature reveal">
+      <img src="../assets/girls-reading-books-courtyard.jpg" alt="Children reading picture books together on a blanket in a courtyard, one holding an open book over her head" style="object-position:50% 45%;">
+      <div class="pad">
+        <div class="date" data-t="b00_date">October 2026 · Field update</div>
+        <h2 data-t="b00_t">The Rise Up &amp; Read Virtual Library</h2>
+        <p data-t="b00_p">A familiar story can bring comfort—even far from home.</p>
+        <p data-t="b00_p2">For children traveling along migration routes, ordinary childhood routines can be difficult to maintain. School may be interrupted, familiar surroundings are left behind, and days are often filled with uncertainty. Yet something as simple as story time can offer a moment to pause, learn, and reconnect.</p>
+        <a class="more" style="display:inline-block;margin-top:14px" href="blog/virtual-library-tsf.html" data-t="b00_cta">Read the full post →</a>
+      </div>
+    </article>
 
     <article class="update-feature reveal">
       <img src="../assets/newsletter-service-hero.jpg" alt="A student volunteer reading and colouring with young children at Camp Mysterio">
@@ -501,25 +512,6 @@
     </div>
   </div>
 
-  <section class="wrap" style="padding-top:12px;">
-    <div class="sec-head reveal">
-      <div class="kicker" data-t="u_res_kicker">Resources</div>
-      <h2 data-t="u_res_h2">Newsletters &amp; reports</h2>
-    </div>
-    <div class="update-list">
-      <div class="news-mini reveal">
-        <h3 data-t="u2_t">Newsletter — January 2026</h3>
-        <p data-t="u2_p">What your support made possible this winter, in photos and short letters from the field.</p>
-        <a class="more" href="https://www.rise-up-and-read.org/newsletter-2026-january" target="_blank" rel="noopener" data-t="u2_cta">Read the newsletter →</a>
-      </div>
-      <div class="news-mini reveal">
-        <h3 data-t="u3_t">2025 Annual Report</h3>
-        <p data-t="u3_p">A full account of the year: our partners, our library clubs, and what comes next.</p>
-        <a class="more" href="blog/annual-report-2025.html" data-t="u3_cta">Open the report →</a>
-      </div>
-    </div>
-  </section>
-
   <section class="wrap reveal" id="subscribe" style="padding-top:56px;padding-bottom:80px;">
     <div style="background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:40px 38px;display:grid;grid-template-columns:1fr minmax(280px,420px);gap:40px;align-items:center;">
       <div>
@@ -575,8 +567,7 @@
     u_kicker: "Novedades",
     u_h1: "Notas <em>desde el terreno.</em>",
     u_sub: "Cada publicación del terreno, en un solo lugar — la más reciente primero.",
-    u_res_kicker: "Recursos",
-    u_res_h2: "Boletines e informes",
+    b00_date: "Octubre 2026 · Novedades del terreno", b00_t: "La Biblioteca Virtual de Rise Up &amp; Read", b00_p: "Un cuento conocido puede reconfortar — incluso lejos de casa.", b00_p2: "Para los niños que recorren las rutas migratorias, mantener las rutinas cotidianas de la infancia puede ser difícil. La escuela puede interrumpirse, dejan atrás lo que les es familiar y los días suelen estar llenos de incertidumbre. Sin embargo, algo tan sencillo como la hora del cuento puede ofrecer un momento para detenerse, aprender y reconectar.", b00_cta: "Lee la publicación completa →",
     b1_date: "2 de junio de 2026", b1_t: "Field Update: The COIL Books Are Here", b1_p: "Estudiantes de posgrado de Montclair State y del CIDE en la Ciudad de México escribieron juntos libros bilingües para los niños de los campamentos — y esta semana los pusimos en sus manos.", b1_cta: "Lee la publicación completa →",
     b2_date: "25 de abril de 2026", b2_t: "From a Seattle Classroom to Mexico City Shelters", b2_p: "Cómo una comunidad escolar convirtió una conversación tranquila en cinco nuevas bibliotecas en campamentos de la Ciudad de México. Por Kim Perkins.", b2_cta: "Leer más →",
     b3_date: "20 de abril de 2026", b3_t: "Stories Without Borders: Expanding Access to Reading Across the Migration Trail", b3_p: "Nuestra biblioteca virtual, en alianza con Télécoms Sans Frontières, ilumina ahora 25 pantallas en centros para migrantes en Colombia, Guatemala y México.", b3_cta: "Leer más →",
